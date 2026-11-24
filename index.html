@@ -4,18 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nguyễn Hữu Tuấn Thịnh – Giới thiệu bản thân</title>
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--bg1:#fdf2ff;--bg2:#e6f0ff;--card:#ffffffcc;--text:#2b2350;--muted:#6b6590;--a:#7c4dff;--b:#ff4d8d;--c:#00b8d4}
+@media (prefers-color-scheme:dark){:root{--bg1:#1a1233;--bg2:#0f1a3a;--card:#ffffff14;--text:#f3eeff;--muted:#b9b2dd}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);min-height:100vh;overflow-x:hidden}
+.bubbles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bubbles i{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff9,var(--a));opacity:.25;animation:up linear infinite}
+@keyframes up{to{transform:translateY(-115vh) translateX(40px);opacity:0}}
+#gate{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(135deg,#4a1d96,#be185d);color:#fff;text-align:center;padding:24px;transition:opacity .6s}
+#gate h2{font-size:clamp(1.6rem,5vw,2.6rem)}
+#gate button{font-size:1.1rem;padding:14px 32px;border:0;border-radius:40px;background:#fff;color:#7c1d6f;font-weight:700;cursor:pointer;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 0 14px #fff3}}
+header{position:relative;z-index:1}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:10px;background:var(--card);backdrop-filter:blur(12px)}
+nav a{color:var(--text);text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.9rem}
+nav a:hover{background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+.hero{text-align:center;padding:50px 20px 40px}
+.avatar{width:150px;height:150px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;font-size:64px;font-weight:800;color:#fff;background:conic-gradient(var(--a),var(--b),var(--c),var(--a));animation:spin 8s linear infinite;position:relative}
+.avatar span{position:absolute;inset:6px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;animation:spin 8s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:clamp(1.8rem,6vw,3.2rem);background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200%;animation:flow 4s linear infinite}
+@keyframes flow{to{background-position:200%}}
+.cls{display:inline-block;margin-top:10px;padding:6px 18px;border-radius:30px;background:var(--card);font-weight:600}
+#typing{margin-top:16px;color:var(--muted);min-height:1.6em;font-size:1.1rem}
+main{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:10px 18px 40px;display:flex;flex-direction:column;gap:22px}
+.card{background:var(--card);backdrop-filter:blur(10px);border-radius:20px;padding:22px;box-shadow:0 8px 30px #7c4dff22;opacity:0;transform:translateY(30px);transition:.7s;border:1px solid #ffffff22}
+.card.show{opacity:1;transform:none}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 14px 36px #ff4d8d33}
+.card h2{font-size:1.3rem;margin-bottom:12px}
+.card h3{font-size:1.1rem;margin:20px 0 8px}
+.card p+p{margin-top:10px}
+.card p,.card li{color:var(--muted);line-height:1.75}
+.card li{margin-bottom:6px}
+.tag{margin-top:10px}
+.card ul{padding-left:20px}
+.wide{grid-column:1/-1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+.tag{display:inline-block;margin:3px 3px 3px 0;padding:4px 12px;border-radius:20px;font-size:.85rem;color:#fff;background:linear-gradient(90deg,var(--a),var(--b))}
+.good{color:#10b981;font-weight:700}.bad{color:#f59e0b;font-weight:700}
+footer{position:relative;z-index:1;text-align:center;padding:30px 18px;background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+footer a.fb{display:inline-block;margin:12px 0;padding:12px 28px;border-radius:30px;background:#fff;color:#1877f2;font-weight:700;text-decoration:none;transition:.3s}
+footer a.fb:hover{transform:scale(1.08)}
+#music{position:fixed;right:16px;bottom:16px;z-index:30;width:52px;height:52px;border-radius:50%;border:0;font-size:22px;cursor:pointer;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;box-shadow:0 6px 20px #0004}
+#music.on{animation:spin 3s linear infinite}
+</style>
 </head>
 <body>
 <div class="bubbles" id="bubbles"></div>
 
-<!-- Nhạc nền: đặt file mp3 vào thư mục music/ và đặt tên là nhac.mp3 -->
-<audio id="bgm" src="music/nhac.mp3" loop preload="auto"></audio>
+<!-- Nhạc nền: file LT.mp3 để cùng thư mục với index.html -->
+<audio id="bgm" src="LT.mp3" loop preload="auto"></audio>
 
 <!-- ============ PHẦN 1: HEADER ============ -->
 <header id="top">
   <nav>
-    <a href="#top">Trang chủ</a><a href="#about">Giới thiệu</a><a href="#hobby">Sở thích</a>
+    <a href="#top">Trang chủ</a><a href="#about">Giới thiệu</a>
     <a href="#sw">Điểm mạnh/yếu</a><a href="#memory">Kỉ niệm</a><a href="#dream">Ước mơ</a><a href="#contact">Liên hệ</a>
   </nav>
   <div class="hero">
@@ -29,37 +75,52 @@
 <!-- ============ PHẦN 2: CONTENT ============ -->
 <main id="content">
   <section class="card" id="about">
-    <h2>👋 Giới thiệu</h2>
-    <p>Xin chào! Mình là <b>Nguyễn Hữu Tuấn Thịnh</b>, học sinh lớp <b>12A10</b>. Rất vui được làm quen với bạn!</p>
-  </section>
+    <h2>👋 Giới thiệu bản thân</h2>
+    <p>Xin chào các bạn! Mình là <b>Nguyễn Hữu Tuấn Thịnh</b>, hiện là học sinh lớp <b>12A10</b>. Mình là một người sống hiền lành, thích sự yên bình nhưng cũng rất thích khám phá những điều mới mẻ. Ở lớp, mình thường được các bạn nhớ đến là người hay đùa, dễ gần và luôn sẵn sàng giúp đỡ khi bạn bè gặp khó khăn. Năm cuối cấp là quãng thời gian đặc biệt, vừa áp lực vừa đáng nhớ, và mình muốn lưu lại những điều đó qua trang web nhỏ này.</p>
 
-  <section class="card" id="place">
-    <h2>📍 Sinh sống ở đâu</h2>
-    <p>Mình đang sống tại: <b>[Điền nơi bạn sống]</b></p>
-  </section>
+    <h3>📍 Sinh sống ở đâu</h3>
+    <p>Mình sinh sống ở <b>Quảng Ngãi</b>, một vùng đất miền Trung với biển xanh, nắng vàng và con người chất phác, hiếu khách. Quê hương mình có đảo Lý Sơn nổi tiếng với những cánh đồng tỏi, bãi biển trong vắt và hoàng hôn rất đẹp. Mình yêu những buổi chiều gió biển, yêu món mì Quảng đậm đà và tiếng nói thân thương của người dân nơi đây.</p>
 
-  <section class="card" id="hobby">
-    <h2>🎮 Sở thích</h2>
-    <span class="tag">Nghe nhạc</span><span class="tag">Chơi game</span><span class="tag">Xem phim</span><span class="tag">Thể thao</span>
-    <p style="margin-top:8px">(Sửa lại các sở thích đúng với bạn nhé!)</p>
+    <h3>🎮 Sở thích</h3>
+    <p>Lúc rảnh, mình thích nghe nhạc để thư giãn sau những giờ học căng thẳng, thích chơi game cùng bạn bè và xem phim để mở rộng thế giới quan. Mình cũng thích chơi thể thao, nhất là những buổi đá bóng cuối tuần, vừa khỏe người vừa gắn kết tình bạn. Thỉnh thoảng mình còn tìm hiểu về máy tính và công nghệ vì thấy rất thú vị.</p>
+    <span class="tag">🎧 Nghe nhạc</span><span class="tag">🎮 Chơi game</span><span class="tag">🎬 Xem phim</span><span class="tag">⚽ Thể thao</span><span class="tag">💻 Công nghệ</span>
   </section>
 
   <section class="card" id="sw">
     <h2>⚖️ Điểm mạnh &amp; điểm yếu</h2>
+    <p>Ai cũng có những mặt tốt và chưa tốt của riêng mình. Mình hiểu rõ điều đó và đang cố gắng hoàn thiện bản thân mỗi ngày.</p>
     <div class="two">
-      <div><p class="good">💪 Điểm mạnh</p><ul><li>Hòa đồng, vui vẻ</li><li>Chăm chỉ, ham học hỏi</li><li>Có trách nhiệm</li></ul></div>
-      <div><p class="bad">🌱 Điểm yếu</p><ul><li>Hay ngại phát biểu</li><li>Đôi khi hay trì hoãn</li><li>Chưa quản lý thời gian tốt</li></ul></div>
+      <div>
+        <p class="good">💪 Điểm mạnh</p>
+        <ul>
+          <li>Hòa đồng, vui vẻ, dễ kết bạn với mọi người.</li>
+          <li>Chăm chỉ, ham học hỏi và không ngại hỏi khi chưa hiểu.</li>
+          <li>Có trách nhiệm với việc mình đã nhận làm.</li>
+          <li>Biết lắng nghe và tôn trọng ý kiến của người khác.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="bad">🌱 Điểm yếu</p>
+        <ul>
+          <li>Hay ngại phát biểu trước đông người.</li>
+          <li>Đôi khi hay trì hoãn, để việc dồn lại sát giờ mới làm.</li>
+          <li>Chưa quản lý thời gian thật tốt.</li>
+          <li>Thỉnh thoảng suy nghĩ quá nhiều nên khó đưa ra quyết định.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="card wide" id="memory">
+  <section class="card" id="memory">
     <h2>📸 Kỉ niệm đáng nhớ</h2>
-    <p>[Viết kỉ niệm đáng nhớ nhất của bạn ở đây.]</p>
+    <p>Kỉ niệm mình nhớ nhất là chuyến đi chơi cùng cả lớp 12A10. Hôm đó trời nắng đẹp, cả lớp cùng nhau chơi trò chơi tập thể, chụp thật nhiều ảnh và cười đến đau cả bụng. Có bạn vấp ngã giữa sân, có bạn hát lạc tông nhưng ai cũng vui vẻ và không ai cười chê, chỉ có tiếng cười rộn ràng.</p>
+    <p>Mình cũng không bao giờ quên những buổi trưa ngồi ôn bài cùng bạn bè, chia nhau từng cái bánh, từng chai nước và động viên nhau trước mỗi kỳ kiểm tra. Những khoảnh khắc giản dị ấy làm mình hiểu rằng tình bạn thời học sinh là điều quý giá nhất, và mình sẽ giữ nó mãi trong tim.</p>
   </section>
 
-  <section class="card wide" id="dream">
+  <section class="card" id="dream">
     <h2>🌟 Ước mơ</h2>
-    <p>Mình mơ ước trở thành <b>[nghề nghiệp mơ ước của bạn]</b>, được học tập, làm việc thật tốt để mang lại niềm vui cho gia đình và những người xung quanh.</p>
+    <p>Ước mơ của mình là thi đỗ vào ngôi trường đại học mà mình yêu thích, học một ngành thật sự phù hợp với đam mê, và sau này trở thành một người có ích cho xã hội. Mình muốn có một công việc ổn định, đủ để lo cho bố mẹ một cuộc sống thoải mái, để những người đã vất vả nuôi mình khôn lớn được nghỉ ngơi và tự hào về con.</p>
+    <p>Xa hơn nữa, mình mong có thể đi nhiều nơi, gặp nhiều người, học hỏi thêm nhiều điều và luôn giữ được sự tử tế, chân thành. Dù sau này đi đâu, mình vẫn sẽ nhớ về Quảng Ngãi, nơi mình lớn lên, và về những người bạn 12A10 đáng yêu.</p>
   </section>
 </main>
 
@@ -73,6 +134,107 @@
 
 <button id="music" title="Bật/tắt nhạc" aria-label="Bật hoặc tắt nhạc">🎵</button>
 
-<script src="script.js"></script>
+<script>
+// Bong bóng nền
+(function () {
+  var b = document.getElementById("bubbles");
+  for (var i = 0; i < 22; i++) {
+    var e = document.createElement("i"), s = 10 + Math.random() * 50;
+    e.style.cssText = "left:" + Math.random() * 100 + "%;width:" + s + "px;height:" + s + "px;animation-duration:" + (8 + Math.random() * 14) + "s;animation-delay:" + Math.random() * 10 + "s";
+    b.appendChild(e);
+  }
+})();
+
+// Hiệu ứng gõ chữ
+(function () {
+  var t = ["Xin chào, mình là Thịnh 👋", "Học sinh lớp 12A10 📚", "Chào mừng bạn đến trang của mình ✨"], i = 0, j = 0, del = false, el = document.getElementById("typing");
+  function tick() {
+    var s = t[i]; el.textContent = s.slice(0, j);
+    if (!del && j < s.length) { j++; setTimeout(tick, 90); }
+    else if (!del) { del = true; setTimeout(tick, 1400); }
+    else if (j > 0) { j--; setTimeout(tick, 40); }
+    else { del = false; i = (i + 1) % t.length; setTimeout(tick, 300); }
+  }
+  tick();
+})();
+
+// Hiện thẻ khi cuộn
+(function () {
+  var c = document.querySelectorAll(".card");
+  if (!("IntersectionObserver" in window)) { c.forEach(function (x) { x.classList.add("show"); }); return; }
+  var o = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("show"); o.unobserve(e.target); } });
+  }, { threshold: .15 });
+  c.forEach(function (x, k) { x.style.transitionDelay = (k % 3) * .12 + "s"; o.observe(x); });
+})();
+
+// ===== NHẠC NỀN =====
+// Ưu tiên phát file LT.mp3. Nếu chưa có file, tự phát giai điệu dự phòng.
+var bgm = document.getElementById("bgm");
+var musicBtn = document.getElementById("music");
+var playing = false, useSynth = false;
+var ctx = null, master = null, timer = null, step = 0;
+var notes = [261.63,329.63,392.00,523.25,392.00,329.63,293.66,349.23,440.00,587.33,440.00,349.23,246.94,311.13,392.00,493.88,392.00,311.13,261.63,329.63,392.00,659.25,523.25,392.00];
+
+function beep(f, t, d, type, v) {
+  var o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.value = f;
+  g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + .03); g.gain.exponentialRampToValueAtTime(.0001, t + d);
+  o.connect(g); g.connect(master); o.start(t); o.stop(t + d + .05);
+}
+function schedule() {
+  var t = ctx.currentTime + .05;
+  for (var k = 0; k < 4; k++) {
+    var n = notes[step % notes.length];
+    beep(n, t + k * .28, .9, "triangle", .18);
+    if (step % 4 === 0 && k === 0) beep(n / 2, t, 1.6, "sine", .2);
+    step++;
+  }
+}
+function startSynth() {
+  try {
+    if (!ctx) { var AC = window.AudioContext || window.webkitAudioContext; ctx = new AC(); master = ctx.createGain(); master.gain.value = .5; master.connect(ctx.destination); }
+    if (ctx.state === "suspended") ctx.resume();
+    if (timer) clearInterval(timer);
+    schedule(); timer = setInterval(schedule, 1120);
+    useSynth = true; setOn(true);
+  } catch (e) {}
+}
+function setOn(v) { playing = v; musicBtn.classList.toggle("on", v); }
+
+function startMusic() {
+  if (useSynth) { startSynth(); return; }
+  var p = bgm.play();
+  if (p && p.then) {
+    p.then(function () { setOn(true); }).catch(function (err) {
+      // Trình duyệt chặn tự phát -> chờ người xem chạm vào trang lần đầu
+      if (err && err.name === "NotAllowedError") waitForTouch();
+      else startSynth(); // chưa có file mp3 -> phát giai điệu dự phòng
+    });
+  } else { setOn(true); }
+}
+function stopMusic() {
+  if (useSynth) { if (timer) clearInterval(timer); timer = null; }
+  else bgm.pause();
+  setOn(false);
+}
+bgm.addEventListener("error", function () { if (!useSynth) startSynth(); });
+
+var waiting = false;
+function waitForTouch() {
+  if (waiting) return; waiting = true;
+  function go(e) {
+    if (e.target.closest && e.target.closest("#music")) return;
+    ["pointerdown", "keydown", "touchstart", "wheel"].forEach(function (n) { window.removeEventListener(n, go); });
+    waiting = false;
+    if (!playing) startMusic();
+  }
+  ["pointerdown", "keydown", "touchstart", "wheel"].forEach(function (n) { window.addEventListener(n, go, { passive: true }); });
+}
+
+musicBtn.onclick = function () { playing ? stopMusic() : startMusic(); };
+// Mở trang là thử phát nhạc ngay; nếu bị chặn thì phát ở lần chạm đầu tiên
+startMusic();
+</script>
 </body>
 </html>
