@@ -1,0 +1,4 @@
+Thu muc chua nhac nen.
+Hay copy file mp3 cua ban vao day va doi ten thanh: nhac.mp3
+(Neu muon dung ten khac, sua dong <audio ... src="music/nhac.mp3"> trong index.html)
+Chua co file mp3 thi trang se tu phat giai dieu du phong.

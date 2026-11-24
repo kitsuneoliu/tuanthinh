@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Hữu Tuấn Thịnh – Giới thiệu bản thân</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bubbles" id="bubbles"></div>
+
+<!-- Nhạc nền: đặt file mp3 vào thư mục music/ và đặt tên là nhac.mp3 -->
+<audio id="bgm" src="music/nhac.mp3" loop preload="auto"></audio>
+
+<!-- ============ PHẦN 1: HEADER ============ -->
+<header id="top">
+  <nav>
+    <a href="#top">Trang chủ</a><a href="#about">Giới thiệu</a><a href="#hobby">Sở thích</a>
+    <a href="#sw">Điểm mạnh/yếu</a><a href="#memory">Kỉ niệm</a><a href="#dream">Ước mơ</a><a href="#contact">Liên hệ</a>
+  </nav>
+  <div class="hero">
+    <div class="avatar"><span>T</span></div>
+    <h1>Nguyễn Hữu Tuấn Thịnh</h1>
+    <div class="cls">🎓 Lớp 12A10</div>
+    <div id="typing"></div>
+  </div>
+</header>
+
+<!-- ============ PHẦN 2: CONTENT ============ -->
+<main id="content">
+  <section class="card" id="about">
+    <h2>👋 Giới thiệu</h2>
+    <p>Xin chào! Mình là <b>Nguyễn Hữu Tuấn Thịnh</b>, học sinh lớp <b>12A10</b>. Rất vui được làm quen với bạn!</p>
+  </section>
+
+  <section class="card" id="place">
+    <h2>📍 Sinh sống ở đâu</h2>
+    <p>Mình đang sống tại: <b>[Điền nơi bạn sống]</b></p>
+  </section>
+
+  <section class="card" id="hobby">
+    <h2>🎮 Sở thích</h2>
+    <span class="tag">Nghe nhạc</span><span class="tag">Chơi game</span><span class="tag">Xem phim</span><span class="tag">Thể thao</span>
+    <p style="margin-top:8px">(Sửa lại các sở thích đúng với bạn nhé!)</p>
+  </section>
+
+  <section class="card" id="sw">
+    <h2>⚖️ Điểm mạnh &amp; điểm yếu</h2>
+    <div class="two">
+      <div><p class="good">💪 Điểm mạnh</p><ul><li>Hòa đồng, vui vẻ</li><li>Chăm chỉ, ham học hỏi</li><li>Có trách nhiệm</li></ul></div>
+      <div><p class="bad">🌱 Điểm yếu</p><ul><li>Hay ngại phát biểu</li><li>Đôi khi hay trì hoãn</li><li>Chưa quản lý thời gian tốt</li></ul></div>
+    </div>
+  </section>
+
+  <section class="card wide" id="memory">
+    <h2>📸 Kỉ niệm đáng nhớ</h2>
+    <p>[Viết kỉ niệm đáng nhớ nhất của bạn ở đây.]</p>
+  </section>
+
+  <section class="card wide" id="dream">
+    <h2>🌟 Ước mơ</h2>
+    <p>Mình mơ ước trở thành <b>[nghề nghiệp mơ ước của bạn]</b>, được học tập, làm việc thật tốt để mang lại niềm vui cho gia đình và những người xung quanh.</p>
+  </section>
+</main>
+
+<!-- ============ PHẦN 3: ĐÁY ============ -->
+<footer id="contact">
+  <h2>📬 Liên hệ với mình</h2>
+  <!-- Thay link Facebook của bạn vào href bên dưới -->
+  <a class="fb" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook của Thịnh</a>
+  <p>© 2026 Nguyễn Hữu Tuấn Thịnh – Lớp 12A10</p>
+</footer>
+
+<button id="music" title="Bật/tắt nhạc" aria-label="Bật hoặc tắt nhạc">🎵</button>
+
+<script src="script.js"></script>
+</body>
+</html>
