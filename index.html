@@ -260,15 +260,18 @@ h2 { display: inline-block; padding-bottom: .7rem; margin-bottom: 1.2rem; backgr
 
 /* Thời khóa biểu */
 #schedule { max-width: 1500px; }
-.schedule { display: grid; grid-template-columns: repeat(7, minmax(170px, 1fr)); gap: .75rem; overflow-x: auto; padding: .25rem .25rem 1rem; }
-.day { background: #fff; border: 1px solid #d9e6e8; border-radius: 1rem; padding: .9rem .8rem 1rem; box-shadow: 0 6px 16px rgba(14,59,70,.08); }
-.day h3 { font-family: var(--hand); font-size: 1.5rem; color: var(--sea); line-height: 1.2; }
-.day-tag { font-size: .85rem; color: var(--coral); font-weight: 600; margin-bottom: .6rem; }
-.day ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
-.day li { display: grid; grid-template-columns: 2.9rem 1fr; gap: .4rem; font-size: .85rem; line-height: 1.45; padding-top: .45rem; border-top: 1px dashed #d9e6e8; }
-.day li:first-child { border-top: 0; padding-top: 0; }
-.day time { font-weight: 800; color: var(--sea-soft); }
-.day-sun { background: var(--blush); border-color: #f4c9bd; }
+.schedule { overflow-x: auto; background: #fff; border: 1px solid #d9e6e8; border-radius: 1rem; box-shadow: 0 6px 16px rgba(14,59,70,.08); }
+.schedule table { width: 100%; min-width: 900px; border-collapse: collapse; table-layout: fixed; font-size: .9rem; line-height: 1.45; }
+.schedule th, .schedule td { padding: .7rem .6rem; border-bottom: 1px dashed #d9e6e8; border-right: 1px solid #e6eff0; vertical-align: top; text-align: left; }
+.schedule tr > :last-child { border-right: 0; }
+.schedule tbody tr:last-child > * { border-bottom: 0; }
+.schedule thead th { background: var(--sea); color: #fff; font-family: var(--hand); font-size: 1.2rem; font-weight: 400; text-align: center; border-right-color: rgba(255,255,255,.15); }
+.schedule thead th.sun { background: var(--coral); }
+.schedule .corner { width: 6.5rem; }
+.schedule tbody th { background: var(--sky); color: var(--sea); font-weight: 400; }
+.schedule tbody th b { display: block; font-weight: 800; color: var(--sea-soft); }
+.schedule tbody th span { font-size: .8rem; color: var(--muted); }
+.schedule td.sun { background: var(--blush); }
     </style>
 </head>
 <body>
@@ -321,97 +324,18 @@ h2 { display: inline-block; padding-bottom: .7rem; margin-bottom: 1.2rem; backgr
             <h2>Thời khóa biểu của tôi</h2>
             <p class="section-intro">Một tuần của mình, từ sáng sớm đến tối: học là chính, xen kẽ thể thao, đọc sách và thư giãn.</p>
             <div class="schedule">
-                <article class="day">
-                    <h3>Thứ 2</h3>
-                    <p class="day-tag">Chào cờ đầu tuần</p>
-                    <ul>
-                    <li><time>6:00</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Chào cờ, học trên lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Học buổi chiều</span></li>
-                    <li><time>17:30</time><span>Chạy bộ</span></li>
-                    <li><time>19:30</time><span>Tự học, làm bài tập</span></li>
-                    <li><time>22:00</time><span>Nghe nhạc, đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day">
-                    <h3>Thứ 3</h3>
-                    <p class="day-tag">Học thêm Toán</p>
-                    <ul>
-                    <li><time>6:00</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Học trên lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Học thêm Toán</span></li>
-                    <li><time>17:30</time><span>Đá bóng cùng bạn</span></li>
-                    <li><time>19:30</time><span>Tự học, làm bài tập</span></li>
-                    <li><time>22:00</time><span>Nghe nhạc, đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day">
-                    <h3>Thứ 4</h3>
-                    <p class="day-tag">Học thêm Lý, Hóa</p>
-                    <ul>
-                    <li><time>6:00</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Học trên lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Học thêm Lý, Hóa</span></li>
-                    <li><time>17:30</time><span>Chạy bộ</span></li>
-                    <li><time>19:30</time><span>Tự học, làm bài tập</span></li>
-                    <li><time>22:00</time><span>Nghe nhạc, đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day">
-                    <h3>Thứ 5</h3>
-                    <p class="day-tag">Học thêm Anh, Văn</p>
-                    <ul>
-                    <li><time>6:00</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Học trên lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Học thêm Anh, Văn</span></li>
-                    <li><time>17:30</time><span>Đá bóng cùng bạn</span></li>
-                    <li><time>19:30</time><span>Tự học, làm bài tập</span></li>
-                    <li><time>22:00</time><span>Nghe nhạc, đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day">
-                    <h3>Thứ 6</h3>
-                    <p class="day-tag">Cuối tuần học</p>
-                    <ul>
-                    <li><time>6:00</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Học trên lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Ôn bài, làm đề</span></li>
-                    <li><time>17:30</time><span>Đá bóng cùng bạn</span></li>
-                    <li><time>19:30</time><span>Tự học, xem lại bài</span></li>
-                    <li><time>22:00</time><span>Nghe nhạc, đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day">
-                    <h3>Thứ 7</h3>
-                    <p class="day-tag">Sinh hoạt lớp</p>
-                    <ul>
-                    <li><time>6:30</time><span>Dậy, ăn sáng</span></li>
-                    <li><time>7:00</time><span>Học nửa buổi, sinh hoạt lớp</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Đọc sách</span></li>
-                    <li><time>17:30</time><span>Chạy bộ</span></li>
-                    <li><time>19:30</time><span>Chơi game cùng bạn (có chừng mực)</span></li>
-                    <li><time>22:30</time><span>Đi ngủ</span></li>
-                    </ul>
-                </article>
-                <article class="day day-sun">
-                    <h3>Chủ nhật</h3>
-                    <p class="day-tag">Nghỉ ngơi</p>
-                    <ul>
-                    <li><time>7:00</time><span>Ngủ thêm, ăn sáng</span></li>
-                    <li><time>9:00</time><span>Phụ giúp gia đình</span></li>
-                    <li><time>12:00</time><span>Ăn trưa, nghỉ trưa</span></li>
-                    <li><time>14:00</time><span>Đọc sách, ôn bài tuần mới</span></li>
-                    <li><time>17:00</time><span>Đá bóng hoặc đi dạo</span></li>
-                    <li><time>19:30</time><span>Chuẩn bị sách vở, nghe nhạc</span></li>
-                    <li><time>22:00</time><span>Đi ngủ sớm</span></li>
-                    </ul>
-                </article>
+                <table>
+                    <thead><tr><th class="corner" scope="col">Giờ</th><th scope="col">Thứ 2</th><th scope="col">Thứ 3</th><th scope="col">Thứ 4</th><th scope="col">Thứ 5</th><th scope="col">Thứ 6</th><th scope="col">Thứ 7</th><th scope="col" class=sun>Chủ nhật</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row"><b>6:00</b><span>Sáng sớm</span></th><td>Dậy, ăn sáng</td><td>Dậy, ăn sáng</td><td>Dậy, ăn sáng</td><td>Dậy, ăn sáng</td><td>Dậy, ăn sáng</td><td>Dậy, ăn sáng (6:30)</td><td class=sun>Ngủ thêm, ăn sáng (7:00)</td></tr>
+                        <tr><th scope="row"><b>7:00</b><span>Buổi sáng</span></th><td>Chào cờ, học trên lớp</td><td>Học trên lớp</td><td>Học trên lớp</td><td>Học trên lớp</td><td>Học trên lớp</td><td>Học nửa buổi, sinh hoạt lớp</td><td class=sun>Phụ giúp gia đình</td></tr>
+                        <tr><th scope="row"><b>12:00</b><span>Trưa</span></th><td>Ăn trưa, nghỉ trưa</td><td>Ăn trưa, nghỉ trưa</td><td>Ăn trưa, nghỉ trưa</td><td>Ăn trưa, nghỉ trưa</td><td>Ăn trưa, nghỉ trưa</td><td>Ăn trưa, nghỉ trưa</td><td class=sun>Ăn trưa, nghỉ trưa</td></tr>
+                        <tr><th scope="row"><b>14:00</b><span>Chiều</span></th><td>Học buổi chiều</td><td>Học thêm Toán</td><td>Học thêm Lý, Hóa</td><td>Học thêm Anh, Văn</td><td>Ôn bài, làm đề</td><td>Đọc sách</td><td class=sun>Đọc sách, ôn bài tuần mới</td></tr>
+                        <tr><th scope="row"><b>17:30</b><span>Chiều muộn</span></th><td>Chạy bộ</td><td>Đá bóng cùng bạn</td><td>Chạy bộ</td><td>Đá bóng cùng bạn</td><td>Đá bóng cùng bạn</td><td>Chạy bộ</td><td class=sun>Đá bóng hoặc đi dạo</td></tr>
+                        <tr><th scope="row"><b>19:30</b><span>Tối</span></th><td>Tự học, làm bài tập</td><td>Tự học, làm bài tập</td><td>Tự học, làm bài tập</td><td>Tự học, làm bài tập</td><td>Tự học, xem lại bài</td><td>Chơi game cùng bạn (có chừng mực)</td><td class=sun>Chuẩn bị sách vở, nghe nhạc</td></tr>
+                        <tr><th scope="row"><b>22:00</b><span>Đêm</span></th><td>Nghe nhạc, đi ngủ</td><td>Nghe nhạc, đi ngủ</td><td>Nghe nhạc, đi ngủ</td><td>Nghe nhạc, đi ngủ</td><td>Nghe nhạc, đi ngủ</td><td>Đi ngủ (22:30)</td><td class=sun>Đi ngủ sớm</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
