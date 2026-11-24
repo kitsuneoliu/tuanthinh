@@ -259,12 +259,13 @@ h2 { display: inline-block; padding-bottom: .7rem; margin-bottom: 1.2rem; backgr
 
 
 /* Thời khóa biểu */
-.schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
-.day { background: #fff; border: 1px solid #d9e6e8; border-radius: 1rem; padding: 1rem 1rem 1.1rem; box-shadow: 0 6px 16px rgba(14,59,70,.08); }
+#schedule { max-width: 1500px; }
+.schedule { display: grid; grid-template-columns: repeat(7, minmax(170px, 1fr)); gap: .75rem; overflow-x: auto; padding: .25rem .25rem 1rem; }
+.day { background: #fff; border: 1px solid #d9e6e8; border-radius: 1rem; padding: .9rem .8rem 1rem; box-shadow: 0 6px 16px rgba(14,59,70,.08); }
 .day h3 { font-family: var(--hand); font-size: 1.5rem; color: var(--sea); line-height: 1.2; }
 .day-tag { font-size: .85rem; color: var(--coral); font-weight: 600; margin-bottom: .6rem; }
 .day ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
-.day li { display: grid; grid-template-columns: 3.1rem 1fr; gap: .5rem; font-size: .9rem; line-height: 1.45; padding-top: .45rem; border-top: 1px dashed #d9e6e8; }
+.day li { display: grid; grid-template-columns: 2.9rem 1fr; gap: .4rem; font-size: .85rem; line-height: 1.45; padding-top: .45rem; border-top: 1px dashed #d9e6e8; }
 .day li:first-child { border-top: 0; padding-top: 0; }
 .day time { font-weight: 800; color: var(--sea-soft); }
 .day-sun { background: var(--blush); border-color: #f4c9bd; }
