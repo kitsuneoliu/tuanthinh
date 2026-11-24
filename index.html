@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu về tôi – Nguyễn Hữu Tuấn Thịnh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <nav>
+            <a href="#about">Về tôi</a>
+            <a href="#hobbies">Sở thích</a>
+            <a href="#hometown">Quê hương</a>
+            <a href="#strengths">Điểm mạnh yếu</a>
+            <a href="#memories">Kỷ niệm</a>
+            <a href="#goals">Mục tiêu</a>
+            <a href="#dreams">Ước mơ</a>
+            <a href="#gallery">Hình ảnh</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <p class="hello">Xin chào, mình là</p>
+                <h1>Nguyễn Hữu Tuấn Thịnh</h1>
+                <p class="lead">Học sinh lớp 12A10, trường THPT Tư Nghĩa 1, Quảng Ngãi. Đây là trang giới thiệu nhỏ về con người, sở thích và những điều mình đang hướng tới.</p>
+                <a class="button" href="#about">Làm quen với mình</a>
+            </div>
+            <figure class="hero-photo">
+                <img src="https://picsum.photos/seed/thinh-portrait/640/800" alt="Ảnh chân dung" width="640" height="800">
+                <span class="sticker s1">12A10</span>
+                <span class="sticker s2">Quảng Ngãi</span>
+            </figure>
+        </section>
+
+        <section id="about" class="block">
+            <h2>Về tôi</h2>
+            <div class="about-grid">
+                <div class="prose">
+                    <p>Mình lớn lên ở Quảng Ngãi, nơi có dòng sông Trà Khúc, những cánh đồng lúa và những con người chất phác. Mình tin rằng một người trưởng thành từ những điều nhỏ: học đều mỗi ngày, giữ lời hứa và biết giúp bạn bè khi cần.</p>
+                    <p>Mình là người điềm tĩnh, thích suy nghĩ kỹ trước khi làm, nhưng một khi đã bắt đầu thì sẽ cố gắng làm đến nơi đến chốn.</p>
+                </div>
+                <dl class="facts">
+                    <div><dt>Họ và tên</dt><dd>Nguyễn Hữu Tuấn Thịnh</dd></div>
+                    <div><dt>Ngày sinh</dt><dd>08/05/2008</dd></div>
+                    <div><dt>Trường</dt><dd>THPT Tư Nghĩa 1, Quảng Ngãi</dd></div>
+                    <div><dt>Lớp</dt><dd>12A10</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="hobbies" class="block tint">
+            <h2>Sở thích</h2>
+            <p class="section-intro">Những việc giúp mình nạp lại năng lượng sau giờ học.</p>
+            <ul class="hobbies">
+                <li><h3>Đọc sách</h3><p>Mình thích đọc truyện, sách kỹ năng và những cuốn nói về cách con người suy nghĩ. Mỗi cuốn sách giống như một cuộc trò chuyện với người viết, giúp mình hiểu thêm về cuộc sống và nhìn mọi việc theo nhiều góc độ hơn. Có những cuốn mình đọc đi đọc lại vì mỗi lần đọc lại thấy thêm một điều mới.</p></li>
+                <li><h3>Thể thao</h3><p>Buổi chiều sau giờ học, mình thường chạy bộ hoặc đá bóng cùng bạn bè. Vận động giúp đầu óc nhẹ nhõm sau một ngày học căng thẳng, đồng thời giữ cho cơ thể khỏe mạnh. Qua những trận bóng, mình cũng học được cách phối hợp với đồng đội và biết chấp nhận thắng thua.</p></li>
+                <li><h3>Âm nhạc</h3><p>Âm nhạc luôn đồng hành cùng mình, từ lúc học bài đến lúc nghỉ ngơi. Những bản nhạc nhẹ giúp mình tập trung hơn, còn những bài sôi động giúp mình lấy lại tinh thần khi mệt mỏi. Mình thích lắng nghe lời bài hát vì mỗi bài đều kể một câu chuyện riêng.</p></li>
+                <li><h3>Chơi game</h3><p>Sau những giờ học căng thẳng, mình thích chơi game để thư giãn và giải trí cùng bạn bè. Những ván game đồng đội giúp mình học cách phối hợp, giao tiếp và giữ bình tĩnh khi gặp tình huống khó. Mình luôn tự nhắc bản thân chơi có chừng mực, dành thời gian cho học tập trước rồi mới giải trí để không ảnh hưởng đến kết quả học.</p></li>
+            </ul>
+
+            <div class="player" id="player" aria-label="Trình phát nhạc">
+                <div class="player-now">
+                    <div class="disc" aria-hidden="true"></div>
+                    <div class="meta">
+                        <p class="song" id="songTitle">Có ai hẹn hò cùng em chưa</p>
+                        <p class="artist" id="songArtist">Thanh Hưng</p>
+                    </div>
+                </div>
+
+                <div class="player-main">
+                    <div class="controls">
+                        <button type="button" class="ctl small" id="btnShuffle" aria-label="Phát ngẫu nhiên" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+                        </button>
+                        <button type="button" class="ctl" id="btnPrev" aria-label="Bài trước">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM9.5 12L18 18V6z"/></svg>
+                        </button>
+                        <button type="button" class="ctl play" id="btnPlay" aria-label="Phát nhạc">
+                            <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                        </button>
+                        <button type="button" class="ctl" id="btnNext" aria-label="Bài tiếp theo">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>
+                        </button>
+                        <button type="button" class="ctl small" id="btnLoop" aria-label="Lặp lại bài này" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg>
+                        </button>
+                    </div>
+                    <div class="seek">
+                        <span id="cur">0:00</span>
+                        <input type="range" class="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Tua bài hát">
+                        <span id="dur">0:00</span>
+                    </div>
+                </div>
+
+                <div class="vol">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4zM15.5 8.5a5 5 0 010 7M19 5a9 9 0 010 14"/></svg>
+                    <input type="range" class="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Âm lượng">
+                </div>
+
+                <ol class="tracklist" id="tracklist"></ol>
+                <audio id="audio" preload="metadata"></audio>
+            </div>
+        </section>
+
+        <section id="hometown" class="block">
+            <h2>Quê hương Quảng Ngãi</h2>
+            <div class="prose wide">
+                <p>Quảng Ngãi là quê hương nơi mình sinh ra, lớn lên và đang học tập. Đó là một vùng đất liền của miền Trung, nơi có dòng sông Trà Khúc hiền hòa chảy qua, có núi Thiên Ấn, núi Thiên Mã sừng sững phía xa và những cánh đồng lúa trải dài theo mùa. Cuộc sống ở đây giản dị, con người mộc mạc nhưng rất nghĩa tình.</p>
+                <p>Với mình, quê hương không chỉ là nơi để ở mà còn là nơi nuôi dưỡng tâm hồn, dạy mình biết trân trọng những điều bình dị như bữa cơm gia đình, con đường quen thuộc đến trường hay buổi chiều gió thổi trên cánh đồng.</p>
+            </div>
+            <div class="trio">
+                <figure><img src="https://vlr.1cdn.vn/2023/03/23/2.jpeg" alt="Dòng sông quê hương" loading="lazy"><figcaption>Dòng sông Trà Khúc</figcaption></figure>
+                <figure><img src="https://cdn3.ivivu.com/2019/10/khung-canh-dong-que-o-quang-ngai-ivivu-1.jpg" alt="Đồng ruộng quê hương" loading="lazy"><figcaption>Đồng quê yên bình</figcaption></figure>
+                <figure><img src="duong-den-truong.png" alt="Con đường quê" loading="lazy"><figcaption>Con đường đến trường</figcaption></figure>
+            </div>
+            <div class="notes">
+                <article>
+                    <h3>Thiên nhiên</h3>
+                    <p>Dòng sông Trà Khúc là con sông lớn của tỉnh, bồi đắp phù sa cho những cánh đồng hai bên bờ. Mỗi buổi chiều, mặt sông phẳng lặng phản chiếu bầu trời, tạo nên khung cảnh rất yên bình. Xa xa là núi Thiên Ấn và núi Thiên Mã, hai ngọn núi gắn với nhiều câu chuyện và cảnh đẹp quen thuộc của người Quảng Ngãi. Mỗi lần đi xa trở về, nhìn thấy những ngọn núi ấy, mình lại có cảm giác như đã về đến nhà.</p>
+                </article>
+                <article>
+                    <h3>Ẩm thực</h3>
+                    <p>Quảng Ngãi có nhiều món ăn dân dã mà ai đã thử một lần đều nhớ mãi. Đó là cá bống sông Trà kho tiêu đậm đà ăn với cơm nóng, là kẹo gương, mạch nha ngọt thơm làm từ đường mía, hay món don thanh ngọt trong bữa cơm quê. Những món ăn ấy không cầu kỳ nhưng mang hương vị của đồng đất quê nhà và bàn tay cần mẫn của người làm ra chúng.</p>
+                </article>
+                <article>
+                    <h3>Con người và truyền thống</h3>
+                    <p>Người Quảng Ngãi nổi tiếng chịu thương chịu khó, hiếu học và giàu tình cảm. Quê hương mình cũng có truyền thống cách mạng đáng tự hào, tiêu biểu là cuộc khởi nghĩa Ba Tơ năm 1945. Lớn lên giữa những câu chuyện ấy, mình hiểu rằng mỗi thế hệ đều có trách nhiệm giữ gìn và làm rạng rỡ thêm quê hương bằng việc học tập và sống tốt từng ngày.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="strengths" class="block tint">
+            <h2>Điểm mạnh và điểm yếu</h2>
+            <p class="section-intro">Hiểu rõ bản thân là bước đầu tiên để tiến bộ. Đây là những điều mình tự nhận ra sau nhiều năm đi học và sau nhiều lần vấp ngã.</p>
+            <div class="pair">
+                <div class="pair-col strong">
+                    <h3>Điểm mạnh</h3>
+                    <ul class="traits">
+                        <li><strong>Kiên trì</strong><span>Gặp bài toán khó, mình có thể ngồi cả buổi tối để tìm ra hướng giải. Mình không thích bỏ dở giữa chừng, nên thường làm đến khi hiểu thật sự mới yên tâm.</span></li>
+                        <li><strong>Điềm tĩnh</strong><span>Khi cả nhóm cuống lên vì sắp đến hạn nộp bài, mình thường là người nhắc mọi người bình tĩnh chia việc ra làm. Nhờ vậy nhóm ít khi cãi nhau.</span></li>
+                        <li><strong>Biết lắng nghe</strong><span>Bạn bè hay kể chuyện với mình vì mình ít ngắt lời và không vội phán xét. Mình nghĩ lắng nghe cũng là một cách giúp đỡ nhau.</span></li>
+                        <li><strong>Có trách nhiệm</strong><span>Đã nhận việc gì, mình cố gắng hoàn thành đúng hẹn. Từ việc trực nhật, làm báo cáo nhóm cho đến việc nhà, mình đều không muốn để người khác phải nhắc nhiều lần.</span></li>
+                        <li><strong>Tò mò, thích học hỏi</strong><span>Mình hay đặt câu hỏi “tại sao” và thích tự tìm hiểu thêm ngoài sách giáo khoa, nhất là những chuyện liên quan đến máy tính và công nghệ.</span></li>
+                    </ul>
+                </div>
+                <div class="pair-col weak">
+                    <h3>Điểm yếu</h3>
+                    <ul class="traits">
+                        <li><strong>Hay suy nghĩ quá lâu</strong><span>Vì thích cân nhắc kỹ nên nhiều lúc mình chần chừ, bỏ lỡ cơ hội phát biểu hoặc đưa ra quyết định đúng lúc. Mình đang tập đặt thời hạn cho mỗi quyết định nhỏ.</span></li>
+                        <li><strong>Ngại nói trước đám đông</strong><span>Đứng trước cả lớp, mình dễ run và nói nhanh hơn bình thường. Mình đang luyện bằng cách chuẩn bị dàn ý kỹ và tập nói trước gương.</span></li>
+                        <li><strong>Cầu toàn</strong><span>Mình hay sửa đi sửa lại một việc dù đã khá ổn, khiến mất thời gian cho những việc khác. Mình học cách nhận ra khi nào “đủ tốt” là đủ.</span></li>
+                        <li><strong>Dễ xao nhãng với điện thoại và game</strong><span>Có lúc định chơi một ván rồi học, nhưng một ván thành nhiều ván. Vì vậy mình để điện thoại ở xa bàn học trong giờ làm bài.</span></li>
+                        <li><strong>Thức khuya khi dồn bài</strong><span>Những tuần có nhiều bài kiểm tra, mình hay ngủ muộn và sáng hôm sau uể oải. Mình đang tập chia nhỏ việc ôn từ sớm.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="memories" class="block">
+            <h2>Kỷ niệm đáng nhớ</h2>
+            <p class="section-intro">Mỗi kỷ niệm là một mảnh ghép làm nên con người mình hôm nay.</p>
+            <ol class="timeline">
+                <li>
+                    <h3>Những buổi chiều thả diều bên sông Trà Khúc</h3>
+                    <p class="when">Hồi tiểu học</p>
+                    <p>Hồi nhỏ, mình cùng mấy đứa bạn trong xóm hay chạy ra bờ sông thả diều sau giờ học. Có lần diều đứt dây bay mất, cả bọn chạy theo hơn một cây số rồi mới tìm thấy nó mắc trên ngọn cây. Về đến nhà ai cũng lấm lem bùn đất và bị mẹ mắng, nhưng đến giờ nhớ lại vẫn thấy vui.</p>
+                </li>
+                <li>
+                    <h3>Ngày đầu tiên bước vào cấp ba</h3>
+                    <p class="when">Năm lớp 10, trường THPT Tư Nghĩa 1</p>
+                    <p>Sáng khai giảng, mình đến sớm nhất lớp vì hồi hộp. Sân trường đông người, ai cũng xa lạ. Cô giáo chủ nhiệm mỉm cười chào từng bạn, và chỉ sau một tuần, cả lớp đã quen nhau như người trong nhà. Đó là lúc mình biết mình đã có một tập thể đáng để gắn bó.</p>
+                </li>
+                <li>
+                    <h3>Lần đầu thuyết trình trước cả lớp</h3>
+                    <p class="when">Năm lớp 10</p>
+                    <p>Mình run đến mức quên mất nửa bài đã học thuộc. Giữa lúc im lặng, một bạn ngồi bàn đầu thì thầm gợi ý câu tiếp theo và mình nói tiếp được. Cuối buổi cô khen mình “dám đứng lên là đã giỏi rồi”. Câu nói ấy giúp mình bớt sợ hơn rất nhiều lần sau đó.</p>
+                </li>
+                <li>
+                    <h3>Chuyến đi chơi cùng lớp</h3>
+                    <p class="when">Năm lớp 11</p>
+                    <p>Cả lớp thuê xe đi dã ngoại cuối học kỳ. Trên đường về xe bị hỏng giữa đường, mọi người xuống ngồi hát cùng nhau bên vệ đường chờ sửa. Chiều hôm đó chẳng ai than phiền, ngược lại ai cũng cười nhiều hơn cả lúc đi.</p>
+                </li>
+                <li>
+                    <h3>Lần đầu mình thật sự thất vọng về điểm số</h3>
+                    <p class="when">Năm lớp 11</p>
+                    <p>Có một bài kiểm tra mình tự tin nhưng điểm lại thấp hơn mong đợi vì chủ quan, không đọc kỹ đề. Hôm đó mình buồn cả buổi chiều, nhưng sau đó mình tự xem lại từng câu sai và lập sổ ghi lỗi. Từ đó mình hiểu thất bại nhỏ cũng là bài học rất có giá trị.</p>
+                </li>
+                <li>
+                    <h3>Cái Tết ở bên gia đình</h3>
+                    <p class="when">Mỗi năm</p>
+                    <p>Mình nhớ nhất những ngày cuối năm, cả nhà quây quần gói bánh, dọn dẹp nhà cửa. Bố mẹ kể chuyện ngày xưa, còn mình ngồi nghe và thấy biết ơn vì được lớn lên trong một gia đình như vậy.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="goals" class="block tint">
+            <h2>Mục tiêu của mình</h2>
+            <ol class="goals">
+                <li><h3>Năm lớp 12</h3><p>Mục tiêu trước mắt của mình là học tập nghiêm túc và đều đặn trong suốt năm cuối cấp, giữ vững kết quả ở tất cả các môn và chuẩn bị thật tốt cho kỳ thi tốt nghiệp THPT. Mình sẽ lập kế hoạch ôn tập cụ thể cho từng tuần, dành nhiều thời gian hơn cho những môn còn yếu và làm thêm đề để quen với áp lực phòng thi. Khi gặp phần kiến thức chưa hiểu, mình sẽ chủ động hỏi thầy cô và bạn bè thay vì để dồn lại. Bên cạnh việc học, mình cũng cố gắng giữ giấc ngủ đều đặn, tập thể dục và nghỉ ngơi hợp lý để có sức khỏe và tinh thần tốt nhất cho đến ngày thi.</p></li>
+                <li><h3>Sau tốt nghiệp</h3><p>Mình muốn chọn một ngành học thật phù hợp với năng lực và đam mê của bản thân, chứ không chỉ chạy theo xu hướng hay lời khuyên của số đông. Vì vậy, ngay trong năm học này mình sẽ tìm hiểu kỹ về các ngành nghề, điểm chuẩn và chương trình đào tạo của từng trường, đồng thời trò chuyện với các anh chị đi trước để biết thêm về thực tế công việc. Mình cũng sẽ lắng nghe ý kiến của gia đình và thầy cô, rồi cân nhắc thật kỹ để đưa ra quyết định mà sau này mình không phải hối tiếc. Khi bước vào đại học, mình mong sẽ học tập chăm chỉ, tham gia các hoạt động của trường và học thêm những kỹ năng cần thiết như ngoại ngữ, tin học và làm việc nhóm.</p></li>
+                <li><h3>Lâu dài</h3><p>Mong muốn lớn nhất của mình là trở thành một người có ích cho gia đình và quê hương. Mình hiểu rằng để làm được điều đó, mình phải không ngừng học hỏi, rèn luyện bản thân cả về kiến thức lẫn đạo đức, sống trung thực và có trách nhiệm với việc mình làm. Mình muốn có một công việc ổn định để phụ giúp bố mẹ, báo đáp công ơn nuôi dạy của gia đình. Và nếu có cơ hội, mình muốn đem những gì đã học được trở về đóng góp cho Quảng Ngãi, nơi có núi Thiên Ấn, núi Thiên Mã và dòng sông Trà Khúc đã nuôi mình khôn lớn.</p></li>
+            </ol>
+        </section>
+
+        <section id="dreams" class="block">
+            <h2>Ước mơ của mình</h2>
+            <div class="prose wide">
+                <p>Nếu mục tiêu là những bước đi cụ thể, thì ước mơ là hướng mà mình muốn đi tới. Có những ước mơ còn xa, nhưng chỉ cần nghĩ đến chúng, mình lại thấy có thêm động lực để học tập mỗi ngày.</p>
+            </div>
+            <div class="dream-list">
+                <article>
+                    <h3>Trở thành người làm công nghệ</h3>
+                    <p>Mình mơ một ngày được tự tay tạo ra những phần mềm hữu ích cho cuộc sống, chẳng hạn một ứng dụng giúp học sinh vùng quê có thể học tập dễ dàng hơn. Mình muốn công nghệ không chỉ dành cho thành phố lớn mà còn đến được với những nơi như quê mình.</p>
+                </article>
+                <article>
+                    <h3>Xây một ngôi nhà nhỏ cho bố mẹ</h3>
+                    <p>Bố mẹ đã vất vả nhiều năm vì mình. Ước mơ giản dị nhưng quan trọng nhất của mình là một ngày nào đó có thể sửa sang lại ngôi nhà, để bố mẹ có một góc vườn nhỏ, có chỗ ngồi uống trà mỗi buổi chiều mà không phải lo toan nữa.</p>
+                </article>
+                <article>
+                    <h3>Đi thật nhiều nơi</h3>
+                    <p>Mình muốn đi hết dải đất hình chữ S, từ Hà Giang đến Cà Mau, nếm từng món ăn, nghe từng giọng nói. Sau đó, nếu có cơ hội, mình muốn ra nước ngoài học hỏi rồi mang kiến thức về cho quê hương.</p>
+                </article>
+                <article>
+                    <h3>Mở một thư viện nhỏ ở quê</h3>
+                    <p>Vì mình yêu sách, mình mơ có một thư viện nhỏ ở Quảng Ngãi, nơi các bạn nhỏ có thể đến đọc sách miễn phí sau giờ học, có máy tính để tra cứu và có người hướng dẫn tận tình.</p>
+                </article>
+                <article>
+                    <h3>Trở thành người đáng tin cậy</h3>
+                    <p>Dù làm nghề gì, mình mong bạn bè và đồng nghiệp có thể tin tưởng mình: nói được làm được, khó khăn không bỏ chạy. Đó là điều mình muốn giữ suốt cuộc đời.</p>
+                </article>
+                <article>
+                    <h3>Chạy một cuộc bán marathon</h3>
+                    <p>Một mục tiêu nhỏ mà mình rất muốn thực hiện: hoàn thành một cuộc chạy 21 km. Mình muốn chứng minh với bản thân rằng chỉ cần kiên trì luyện tập mỗi ngày, việc tưởng chừng không thể cũng sẽ làm được.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="gallery" class="block tint">
+            <h2>Góc hình ảnh</h2>
+            <div class="gallery">
+                <img src="anh/g1.jpg" alt="Hình ảnh 1" loading="lazy">
+                <img src="anh/g2.jpg" alt="Hình ảnh 2" loading="lazy">
+                <img src="anh/g3.jpg" alt="Hình ảnh 3" loading="lazy">
+                <img src="anh/g4.jpg" alt="Hình ảnh 4" loading="lazy">
+                <img src="anh/g5.jpg" alt="Hình ảnh 5" loading="lazy">
+                <img src="anh/g6.jpg" alt="Hình ảnh 6" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p class="foot-name">Nguyễn Hữu Tuấn Thịnh</p>
+        <p>Học sinh lớp 12A10, THPT Tư Nghĩa 1, Quảng Ngãi</p>
+        <p class="contact">
+            <a href="tel:0348395439">&#9742; 0348395439</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.facebook.com/tuan.thinh.399434?rdid=xxWwhPla5o6A4zmh&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DHEa6zw6J%2F" target="_blank" rel="noopener">Facebook</a>
+        </p>
+    </footer>
+
+    <script>
+    (function () {
+        // Danh sách bài hát. Muốn dùng nhạc của bạn: bỏ file mp3 vào thư mục nhac/
+        // rồi sửa title, artist, src bên dưới (thêm bao nhiêu bài cũng được).
+        var tracks = [
+            { title: 'Có ai hẹn hò cùng em chưa', artist: 'Thanh Hưng', src: 'nhac/co-ai-hen-ho-cung-em-chua.mp3' },
+        ];
+
+        var audio = document.getElementById('audio');
+        var player = document.getElementById('player');
+        var btnPlay = document.getElementById('btnPlay');
+        var btnPrev = document.getElementById('btnPrev');
+        var btnNext = document.getElementById('btnNext');
+        var btnShuffle = document.getElementById('btnShuffle');
+        var btnLoop = document.getElementById('btnLoop');
+        var seek = document.getElementById('seek');
+        var vol = document.getElementById('vol');
+        var cur = document.getElementById('cur');
+        var dur = document.getElementById('dur');
+        var titleEl = document.getElementById('songTitle');
+        var artistEl = document.getElementById('songArtist');
+        var list = document.getElementById('tracklist');
+        var index = 0, shuffle = false, loop = false;
+
+        function fmt(s) {
+            if (!isFinite(s)) return '0:00';
+            var m = Math.floor(s / 60), r = Math.floor(s % 60);
+            return m + ':' + (r < 10 ? '0' : '') + r;
+        }
+        function fill(el) {
+            var max = parseFloat(el.max) || 1;
+            el.style.setProperty('--p', (el.value / max * 100) + '%');
+        }
+        function renderList() {
+            list.innerHTML = '';
+            tracks.forEach(function (t, n) {
+                var li = document.createElement('li');
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.textContent = t.title;
+                if (n === index) b.className = 'on';
+                b.addEventListener('click', function () { load(n, true); });
+                li.appendChild(b);
+                list.appendChild(li);
+            });
+        }
+        function load(n, autoplay) {
+            index = n;
+            audio.src = tracks[n].src;
+            titleEl.textContent = tracks[n].title;
+            artistEl.textContent = tracks[n].artist;
+            seek.value = 0; seek.max = 100; fill(seek);
+            cur.textContent = '0:00'; dur.textContent = '0:00';
+            renderList();
+            if (autoplay) audio.play().catch(function () {});
+        }
+        function next() {
+            var n;
+            if (shuffle && tracks.length > 1) {
+                do { n = Math.floor(Math.random() * tracks.length); } while (n === index);
+            } else {
+                n = (index + 1) % tracks.length;
+            }
+            load(n, true);
+        }
+        function prev() {
+            if (audio.currentTime > 3) { audio.currentTime = 0; return; }
+            load((index - 1 + tracks.length) % tracks.length, true);
+        }
+
+        btnPlay.addEventListener('click', function () {
+            if (audio.paused) audio.play().catch(function () {}); else audio.pause();
+        });
+        btnNext.addEventListener('click', next);
+        btnPrev.addEventListener('click', prev);
+        btnShuffle.addEventListener('click', function () {
+            shuffle = !shuffle;
+            btnShuffle.classList.toggle('on', shuffle);
+            btnShuffle.setAttribute('aria-pressed', shuffle);
+        });
+        btnLoop.addEventListener('click', function () {
+            loop = !loop;
+            btnLoop.classList.toggle('on', loop);
+            btnLoop.setAttribute('aria-pressed', loop);
+        });
+
+        audio.addEventListener('play', function () {
+            player.classList.add('playing');
+            btnPlay.setAttribute('aria-label', 'Tạm dừng');
+        });
+        audio.addEventListener('pause', function () {
+            player.classList.remove('playing');
+            btnPlay.setAttribute('aria-label', 'Phát nhạc');
+        });
+        audio.addEventListener('loadedmetadata', function () {
+            seek.max = audio.duration;
+            dur.textContent = fmt(audio.duration);
+            fill(seek);
+        });
+        audio.addEventListener('timeupdate', function () {
+            seek.value = audio.currentTime;
+            cur.textContent = fmt(audio.currentTime);
+            fill(seek);
+        });
+        audio.addEventListener('ended', function () {
+            if (loop) { audio.currentTime = 0; audio.play().catch(function () {}); } else { next(); }
+        });
+
+        seek.addEventListener('input', function () {
+            audio.currentTime = seek.value;
+            cur.textContent = fmt(audio.currentTime);
+            fill(seek);
+        });
+        vol.addEventListener('input', function () {
+            audio.volume = vol.value;
+            fill(vol);
+        });
+
+        audio.volume = parseFloat(vol.value);
+        fill(vol);
+        load(0, false);
+    })();
+    </script>
+</body>
+</html>
